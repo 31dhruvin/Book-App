@@ -1,0 +1,112 @@
+
+<div class="bootstrap-wrapper">
+  <div class="container w-50">
+
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="tab-login" data-mdb-toggle="pill" routerLink="" role="tab"
+      aria-controls="pills-login" aria-selected="true">Login</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="tab-register" data-mdb-toggle="pill" routerLink="/signup" role="tab"
+      aria-controls="pills-register" aria-selected="false">Register</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+    <mat-card>
+    <form (ngSubmit)="formSubmit()">
+      <div class="text-center mb-3">
+        <h3>Register with:</h3>
+        <!-- <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+        </button> -->
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-linkedin"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Firstname</mat-label>
+        <input 
+        [(ngModel)]="user.firstName"
+        name="firstName"
+        matInput placeholder="Firstname">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Lastname</mat-label>
+        <input 
+        [(ngModel)]="user.lastName"
+        name="lastName"
+        matInput placeholder="Lastname">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Username</mat-label>
+        <input 
+        [(ngModel)]="user.username"
+        name="username"
+        matInput placeholder="Username">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input 
+        [(ngModel)]="user.email"
+        name="email"
+        matInput placeholder="Email">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input 
+        type="password"
+        [(ngModel)]="user.password"
+        name="password"
+        matInput placeholder="Password">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Phone*</mat-label>
+        <input 
+        type="tel"
+        maxlength="10"
+
+        [(ngModel)]="user.phone"
+        name="phone"
+        matInput placeholder="Phone">
+      </mat-form-field>
+
+      
+      
+
+      <div class="col-md-6">
+            <!-- Checkbox -->
+            <div class="form-check mb-3 mb-md-0">
+              <a 
+              routerLink="">
+              Already have an account?</a>
+            </div>
+          </div>
+
+      
+      <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+      <br />
+      </form>
+    </mat-card>
+      </div>
+<!-- Pills content -->
+  </div>
+  </div>
+
